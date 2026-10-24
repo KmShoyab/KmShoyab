@@ -2,12 +2,17 @@ import TechOrbit from "@/components/TechOrbit";
 import ThemeToggle from "@/components/ThemeToggle";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import AboutMe from "@/components/AboutMe";
-
+import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
+import SocialLinks from "@/components/SocialLinks";
+import Experience from "@/components/Experience";
 const navigation = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
   { label: "Writing", href: "#writing" },
   { label: "Contact", href: "#contact" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
 ];
 
 export default function Home() {
@@ -40,7 +45,6 @@ export default function Home() {
 
         <ThemeToggle />
       </header>
-
       {/* Hero section */}
       <section
         id="home"
@@ -86,27 +90,24 @@ export default function Home() {
         {/* Technology animation will go here in our next step. */}
         <TechOrbit />
       </section>
-
       {/* Work section */}
       <FeaturedProjects />
-
       {/* About section */}
-     <AboutMe />
-
+      <Skills />
+      <Experience />
       {/* Footer */}
-      <footer
-        id="contact"
-        className="mx-auto mt-8 flex w-full max-w-7xl scroll-mt-8 flex-col gap-3 border-t border-slate-100 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16"
-      >
+      <Contact />
+      <footer className="mx-auto mt-8 flex w-full max-w-7xl flex-col gap-3 border-t border-slate-200/70 px-4 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-10 lg:px-16 dark:border-slate-800 dark:text-slate-400">
         <span>© {new Date().getFullYear()} KM Shoyab</span>
 
         <a
-          className="transition hover:text-blue-600"
-          href="mailto:hello@kmshoyab.com"
+          className="transition-colors duration-200 hover:text-blue-600"
+          href="mailto:kmshoyabofficial@gmail.com"
         >
           Get in touch ↗
         </a>
       </footer>
+      
     </main>
   );
 }
