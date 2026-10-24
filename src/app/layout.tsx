@@ -14,9 +14,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KM Shoyab | Developer & Computer Science Student",
+  title: {
+    default: "KM Shoyab | Software Developer",
+    template: "%s | KM Shoyab",
+  },
   description:
-    "The personal portfolio of KM Shoyab, showcasing software development, projects, and technical interests.",
+    "Explore the portfolio of KM Shoyab, a computer science student and developer interested in software engineering, web applications, and intelligent software.",
+  keywords: [
+    "KM Shoyab",
+    "Software Developer",
+    "Web Developer",
+    "Computer Science",
+    "Next.js",
+    "React",
+    "PHP",
+    "WordPress",
+  ],
+  openGraph: {
+    title: "KM Shoyab | Software Developer",
+    description:
+      "Discover my projects, technical skills, and journey in software development.",
+    siteName: "KM Shoyab",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +49,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
