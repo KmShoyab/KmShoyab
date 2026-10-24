@@ -1,5 +1,7 @@
 import TechOrbit from "@/components/TechOrbit";
 import ThemeToggle from "@/components/ThemeToggle";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import AboutMe from "@/components/AboutMe";
 
 const navigation = [
   { label: "Work", href: "#work" },
@@ -86,30 +88,10 @@ export default function Home() {
       </section>
 
       {/* Work section */}
-      <section
-        id="work"
-        className="mx-auto w-full max-w-7xl scroll-mt-8 border-t border-slate-100 px-6 py-12 sm:px-10 lg:px-16"
-      >
-        <p className="text-sm text-slate-500">
-          Selected work <span className="text-blue-600">/</span> Coming into
-          focus
-        </p>
-      </section>
+      <FeaturedProjects />
 
       {/* About section */}
-      <section
-        id="about"
-        className="mx-auto w-full max-w-7xl scroll-mt-8 px-6 py-12 sm:px-10 lg:px-16"
-      >
-        <h2 className="text-2xl font-medium tracking-tight">
-          Curiosity into creation.
-        </h2>
-
-        <p className="mt-4 max-w-2xl leading-7 text-slate-600">
-          I&apos;m developing my skills in software engineering and exploring
-          how thoughtful interfaces can make complex technology easier to use.
-        </p>
-      </section>
+     <AboutMe />
 
       {/* Footer */}
       <footer
