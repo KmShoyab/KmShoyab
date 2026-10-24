@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ========================================
+   1. GLOBAL COLORS
+======================================== */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Tailwind CSS theme configuration */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ========================================
+   2. BASIC PAGE STYLING
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   3. TECHNOLOGY LOGO ANIMATIONS
+======================================== */
+
+/* Gentle floating movement */
+
+@keyframes tech-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(8px, -18px, 0);
+  }
+}
+
+/* Curved movement */
+
+@keyframes tech-orbit {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(12px, 5px, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+
+  75% {
+    transform: translate3d(-12px, 5px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ========================================
+   4. FLOATING LOGOS
+======================================== */
+
+.tech-orbit .float-one {
+  animation: tech-float 4s ease-in-out infinite;
+}
+
+.tech-orbit .float-two {
+  animation: tech-float 5s ease-in-out infinite;
+  animation-delay: -1s;
+}
+
+.tech-orbit .float-three {
+  animation: tech-float 6s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.tech-orbit .float-four {
+  animation: tech-float 4.5s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+
+/* ========================================
+   5. CURVED-MOVEMENT LOGOS
+======================================== */
+
+.tech-orbit .orbit-one {
+  animation: tech-orbit 7s ease-in-out infinite;
+}
+
+.tech-orbit .orbit-two {
+  animation: tech-orbit 8s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.tech-orbit .orbit-three {
+  animation: tech-orbit 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.tech-orbit .orbit-four {
+  animation: tech-orbit 10s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* ========================================
+   6. ACCESSIBILITY
+   Respect reduced-motion preferences
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-orbit .float-one,
+  .tech-orbit .float-two,
+  .tech-orbit .float-three,
+  .tech-orbit .float-four,
+  .tech-orbit .orbit-one,
+  .tech-orbit .orbit-two,
+  .tech-orbit .orbit-three,
+  .tech-orbit .orbit-four {
+    animation: none !important;
+  }
+}
+@keyframes logo-float-final {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tech-orbit > div[title] {
+  animation: logo-float-final 3s ease-in-out infinite alternate !important;
+}
