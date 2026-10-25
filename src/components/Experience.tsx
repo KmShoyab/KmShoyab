@@ -1,11 +1,11 @@
 const experience = [
 {
-period: "2021 — Present",
-role: "WordPress & Web Development",
-type: "Independent Development",
+period: "2025 — Present",
+role: "Lead Developer",
+type: "Doddot.Inc",
 description:
-"Building experience with WordPress websites, front-end technologies, and web development workflows while expanding my software engineering skills.",
-skills: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+"Building experience with AI intigrated solutions, front-end technologies, and web development workflows while expanding my software engineering skills.",
+skills: ["TypeScript", "PHP", "HTML", "CSS", "JavaScript"],
 },
 {
 period: "Ongoing",
