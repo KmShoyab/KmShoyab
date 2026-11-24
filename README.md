@@ -132,25 +132,7 @@
 ---
 
 ## 📊 GitHub Stats
-## 📁 Featured Projects
 
-<p align="center">
-  <a href="https://github.com/KmShoyab/REPO-NAME-1">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KmShoyab&repo=REPO-NAME-1&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/KmShoyab/REPO-NAME-2">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KmShoyab&repo=REPO-NAME-2&theme=tokyonight&hide_border=true" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/KmShoyab/REPO-NAME-3">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KmShoyab&repo=REPO-NAME-3&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/KmShoyab/REPO-NAME-4">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=KmShoyab&repo=REPO-NAME-4&theme=tokyonight&hide_border=true" />
-  </a>
-</p>
 
 ---
 
