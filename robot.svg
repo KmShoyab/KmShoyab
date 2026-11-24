@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f24"/>
+      <stop offset="1" stop-color="#1a0b3b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="400" height="300" rx="24" fill="url(#bg)"/>
+
+  <!-- antenna -->
+  <line x1="200" y1="40" x2="200" y2="18" stroke="#00f0ff" stroke-width="4" filter="url(#glow)"/>
+  <circle cx="200" cy="12" r="6" fill="#ff00e5" filter="url(#glow)">
+    <animate attributeName="r" values="4;9;4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- head -->
+  <rect x="60" y="40" width="280" height="230" rx="50" fill="#0d1530" stroke="#00f0ff" stroke-width="4" filter="url(#glow)"/>
+
+  <!-- BIG left eye -->
+  <ellipse cx="140" cy="125" rx="45" ry="48" fill="#e8fcff" stroke="#00f0ff" stroke-width="3" filter="url(#glow)">
+    <animate attributeName="ry" values="48;48;4;48;48" keyTimes="0;0.88;0.92;0.96;1" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  <circle cx="140" cy="125" r="20" fill="#00c3ff">
+    <animate attributeName="cx" values="140;155;125;140" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="125;118;130;125" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- BIG right eye -->
+  <ellipse cx="260" cy="125" rx="45" ry="48" fill="#e8fcff" stroke="#00f0ff" stroke-width="3" filter="url(#glow)">
+    <animate attributeName="ry" values="48;48;4;48;48" keyTimes="0;0.88;0.92;0.96;1" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  <circle cx="260" cy="125" r="20" fill="#00c3ff">
+    <animate attributeName="cx" values="260;275;245;260" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="125;118;130;125" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- OPEN mouth -->
+  <ellipse cx="200" cy="215" rx="42" ry="14" fill="#05060f" stroke="#ff00e5" stroke-width="4" filter="url(#glow)">
+    <animate attributeName="ry" values="10;32;10" dur="1.2s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="200" cy="228" rx="22" ry="8" fill="#ff4d9d" opacity="0.8">
+    <animate attributeName="ry" values="3;12;3" dur="1.2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- scanning line -->
+  <rect x="62" y="42" width="276" height="4" fill="#00f0ff" opacity="0.35">
+    <animate attributeName="y" values="42;264;42" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
